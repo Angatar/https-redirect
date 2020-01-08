@@ -20,7 +20,7 @@ If You need to redirect requests sent on port 80 to https:
 
 `docker run --name https-redirect -d -p 80:80 d3fk/https-redirect`
 
-In case you also need to redirect requests from port 8080 in addition to the port 80 towards https you cans simply run:
+In case you also need to redirect requests from port 8080 in addition to the port 80 towards https you can simply run:
 
 `docker run --name https-redirect -d -p 80:80 -p 8080:80 d3fk/https-redirect`
 
