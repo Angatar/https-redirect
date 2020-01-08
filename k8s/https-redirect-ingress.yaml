@@ -1,0 +1,26 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: https-redirect-ingress
+  annotations:
+
+    kubernetes.io/elb.ip: YOUR_LOADBALANCER_IP
+    kubernetes.io/elb.id: YOUR_LOADBALANCER_ID
+    kubernetes.io/elb.port: "80"
+
+spec:
+  rules:
+  - host: SUBDOMAIN1.YOURDOMAIN
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: https-redirect-nodeport
+          servicePort: 32080
+  - host: SUBDOMAIN2.YOURDOMAIN
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: https-redirect-nodeport
+          servicePort: 32080
