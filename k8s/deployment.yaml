@@ -1,0 +1,29 @@
+apiVersion: extensions/v1beta1
+
+kind: Deployment
+
+metadata:
+  name: https-redirect
+
+spec:
+  selector:
+    matchLabels:
+      app: https-redirect
+
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 1
+
+  replicas: 1
+
+  template:
+    metadata:
+      labels:
+        app: https-redirect
+    spec:
+      containers:
+      - name: https-redirect
+        image: d3fk/https-redirect:latest
+        imagePullPolicy: Always
