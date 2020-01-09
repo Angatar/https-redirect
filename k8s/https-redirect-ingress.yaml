@@ -3,7 +3,6 @@ kind: Ingress
 metadata:
   name: https-redirect-ingress
   annotations:
-
     kubernetes.io/elb.ip: YOUR_LOADBALANCER_IP
     kubernetes.io/elb.id: YOUR_LOADBALANCER_ID
     kubernetes.io/elb.port: "80"
