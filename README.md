@@ -16,7 +16,7 @@ Really useful if you need to redirect any request sent to a port (any) to https 
 You already have something (app, container...) running on https and do not want to manage any redirection from other ports within this something ... this container is what you are looking for.
 
 ### Docker usage
-If You need to redirect requests sent on port 80 to https: 
+If you need to redirect requests sent on port 80 to https: 
 
 `docker run --name https-redirect -d -p 80:80 d3fk/https-redirect`
 
