@@ -3,7 +3,7 @@ A nginx:alpine container that is set to redirect everything to https
 
 
 ## Docker image
-pre-build from Docker hub with "automated build" option.
+prebuilt from Docker hub with "automated build" option.
 
 image name **d3fk/https-redirect**
 
