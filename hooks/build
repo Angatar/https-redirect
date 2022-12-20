@@ -14,6 +14,3 @@ docker buildx build \
 -t $IMAGE_NAME \
 --push \
 .
-
-echo "** push of multiarch build completed ---- displaying output of docker buildx imagetools inspect $IMAGE_NAME :"
-docker buildx imagetools inspect $IMAGE_NAME
