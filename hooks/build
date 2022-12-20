@@ -14,3 +14,5 @@ docker buildx build \
 -t $IMAGE_NAME \
 --push \
 .
+
+docker buildx imagetools inspect $IMAGE_NAME
