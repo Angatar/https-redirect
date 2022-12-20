@@ -12,5 +12,5 @@ docker buildx build \
 --progress plain \
 -f $DOCKERFILE_PATH \
 -t $IMAGE_NAME \
---push
-        .
+--push \
+.
