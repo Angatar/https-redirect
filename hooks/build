@@ -15,4 +15,5 @@ docker buildx build \
 --push \
 .
 
+echo "** push complete ---- displaying buildx imagetools inspect output:"
 docker buildx imagetools inspect $IMAGE_NAME
