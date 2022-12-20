@@ -1,6 +1,9 @@
 #!/bin/bash
-export DOCKER_CLI_EXPERIMENTAL=enabled
-export DOCKER_BUILDKIT=1
+
+docker build\
+-f $DOCKERFILE_PATH \
+-t $IMAGE_NAME \
+.
 
 docker buildx create \
 --name multiarch \
@@ -17,4 +20,3 @@ docker buildx build \
 --push \
 .
 
-docker images
