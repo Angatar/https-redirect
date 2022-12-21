@@ -1,15 +1,24 @@
+![Docker Pulls](https://badgen.net/docker/pulls/d3fk/https-redirect?icon=docker&label=pulls)](https://hub.docker.com/r/d3fk/https-redirect/tags) [![Docker Image Size](https://badgen.net/docker/size/d3fk/https-redirect/latest?icon=docker&label=image%20size)
+](https://hub.docker.com/r/d3fk/https-redirect/tags) [![Docker Stars](https://badgen.net/docker/stars/d3fk/https-redirect?icon=docker&label=stars)](https://hub.docker.com/r/d3fk/https-redirect) [![Docker build](https://img.shields.io/docker/cloud/automated/
+d3fk/https-redirect?label=build&logo=docker)](https://hub.docker.com/r/d3fk/https-redirect/tags) [![Build status](https://img.shields.io/docker/cloud/build/d3fk/https-redirect?label=build%20status&logo=docker)](https://hub.docker.com/r/d3fk/https-redirect/tags) [!
+[Github Stars](https://badgen.net/github/stars/Angatar/https-redirect?icon=github&color=green)](https://github.com/Angatar/https-redirect) [![Github forks](https://badgen.net/github/forks/Angatar/https-redirect?icon=github)](https://github.com/Angatar/kubec
+tl/fork) [![Github open issues](https://badgen.net/github/open-issues/Angatar/https-redirect?icon=github)](https://github.com/Angatar/https-redirect/issues) [![Github closed issues](https://badgen.net/github/closed-issues/Angatar/https-redirect?icon=github)
+](https://github.com/Angatar/https-redirect/issues?q=is%3Aissue+is%3Aclosed) [![GitHub license](https://img.shields.io/github/license/Angatar/https-redirect)](https://github.com/Angatar/https-redirect/blob/master/LICENSE)
+
 # https-redirect (d3fk/https-redirect)
-A nginx:alpine container that is set to redirect everything to https
+A nginx:alpine-slim container([![Docker Image Size](https://badgen.net/docker/size/d3fk/https-redirect/latest?icon=docker&label=compressed)](https://hub.docker.com/r/d3fk/https-redirect/tags)) that is set to redirect everything to https
 
 
 ## Docker image
-prebuilt from Docker hub with "automated build" option.
+Prebuilt from Docker hub with "automated build" option, now available as multi-arch image for most of architectures i.e: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64/v8,linux/ppc64le,linux/s390x.
 
 image name **d3fk/https-redirect**
 
 `docker pull d3fk/https-redirect`
 
 Docker hub repository: https://hub.docker.com/r/d3fk/https-redirect/
+
+![DockerHub Badge](https://dockeri.co/image/d3fk/https-redirect)](https://hub.docker.com/r/d3fk/https-redirect)
 
 ## Usage
 Really useful if you need to redirect any request sent to a port (any) to https protocol
@@ -30,5 +39,7 @@ You can redirect from any port to https, simply adapt the ports numbers to your 
 
 ### Kubernetes usage
 
-This container was initially created to serve in a kubernetes context: The default ingress controler in use on our k8s cluster didn't managed correctly the force-ssl-redirect directive and it was disproportionated (additional resources consuming with several pods created) to go with another ingress controller (Nginx, Traefic, HAProxy etc...) simply for that purpose since this small container can do the stuff. You can use as templates the YAML files provided in the k8s directory of this repository for your own cluster.
+This container was initially created to serve in a kubernetes context: The default ingress controler in use with our k8s cluster didn't managed correctly the force-ssl-redirect directive and it was disproportionated (additional resources consuming with several pods created) to go with another ingress controller (Nginx, Traefic, HAProxy etc...) simply for that purpose since this small container can do the stuff. You can use as templates the YAML files provided in the k8s directory of this repository for your own cluster.
+
+[![GitHub license](https://img.shields.io/github/license/Angatar/https-redirect)](https://github.com/Angatar/https-redirect/blob/master/LICENSE)
 
