@@ -7,8 +7,6 @@ docker buildx create \
 --bootstrap \
 --use
 
-docker pull index.docker.io/d3fk/https-redirect:latest
-
 docker buildx build \
 --platform linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64/v8,linux/ppc64le,linux/s390x \
 --pull \
@@ -18,3 +16,4 @@ docker buildx build \
 --push \
 .
 
+docker pull $IMAGE_NAME 
