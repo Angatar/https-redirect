@@ -7,13 +7,13 @@ docker buildx create \
 --bootstrap \
 --use
 
-echo "attempt to build IMAGE_NAME $IMAGE_NAME tag $DOCKER_TAG repo $DOCKER_REPO"
+docker pull index.docker.io/d3fk/https-redirect:latest
 
 docker buildx build \
 --platform linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64/v8,linux/ppc64le,linux/s390x \
 --pull \
 --progress plain \
---tag $IMAGE_NAME:latest \
+--tag $IMAGE_NAME \
 --file $DOCKERFILE_PATH \
 --push \
 .
