@@ -21,7 +21,7 @@ image name **d3fk/https-redirect**
 
 Docker hub repository: https://hub.docker.com/r/d3fk/https-redirect/
 
-[![DockerHub Badge](https://lucky-red-wombat.cyclic.app/image/d3fk/https-redirect)](https://hub.docker.com/r/d3fk/https-redirect)
+[![DockerHub Badge](https://dockeri.co/image/d3fk/https-redirect)](https://hub.docker.com/r/d3fk/https-redirect)
 
 ## Usage
 Really useful if you need to redirect any request sent to a port (any) to https protocol
